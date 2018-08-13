@@ -111,7 +111,7 @@ table.vgt-table {
 
 .progress-bar:before {
   bottom: 0;
-  background: url("../assets/stripes.png") 0 0 repeat;
+  background: url("../../static/image/stripes.png") 0 0 repeat;
   border-radius: 3px 3px 0 0;
 }
 
