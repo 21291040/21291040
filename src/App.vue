@@ -7,6 +7,7 @@
       :search-options="{
                   enabled: true,
                   placeholder: '关键字搜索...',
+                  searchFn: search,
                 }"
       :group-options="{
                   enabled: true,
@@ -245,7 +246,7 @@ export default {
     formattedName () {
       return function (props) {
         if (props.column.field === 'name') {
-          let str = props.row.name
+          let str = props.row.name;
           if (props.row.sex === '男') {
             str = `<span class="color_red">${props.row.name}</span>`
           } else if (props.row.sex === '女') {
@@ -264,7 +265,15 @@ export default {
       }
     },
   },
-  methods: {},
+  methods: {
+    search (row, col, cellValue, searchTerm) {
+      if (searchTerm.slice(-1) === '#' && col.field === 'recommend') {
+        return `${cellValue}#` === searchTerm
+      } else {
+        return `${cellValue}`.indexOf(searchTerm) !== -1
+      }
+    },
+  },
   mounted () {
   },
   components: {},
