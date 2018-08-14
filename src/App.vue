@@ -246,7 +246,7 @@ export default {
     formattedName () {
       return function (props) {
         if (props.column.field === 'name') {
-          let str = props.row.name;
+          let str = props.row.name
           if (props.row.sex === '男') {
             str = `<span class="color_red">${props.row.name}</span>`
           } else if (props.row.sex === '女') {
