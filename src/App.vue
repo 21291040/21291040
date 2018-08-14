@@ -259,7 +259,9 @@ export default {
               str = `${str}|${props.row.family}`
             }
           }
-          return `${str}<div class="progress"><div class="progress-bar progress-bar-${props.row.recommend * 20}"></div></div>`
+          let recommend = props.row.recommend
+          recommend = recommend * 20 > 100 ? 100 : recommend * 20
+          return `${str}<div class="progress"><div class="progress-bar progress-bar-${recommend}"></div></div>`
         }
         return props.formattedRow[props.column.field]
       }
