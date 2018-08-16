@@ -1,5 +1,82 @@
 <template>
   <div>
+    <div id="search-tips" class="hidden">
+      <div class="search-tips-panel">
+        <table class="search-tips-table">
+          <caption>特殊关键字搜索提示</caption>
+          <thead>
+            <th>关键字</th>
+            <th>匹配内容</th>
+            <th>关键字</th>
+            <th>匹配内容</th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>0#</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-0"></div>
+              </div>
+            </td>
+            <td>1#</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-20"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>2#</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-40"></div>
+              </div>
+            </td>
+            <td>3#</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-60"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>4#</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-80"></div>
+              </div>
+            </td>
+            <td>5#</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-100"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>有</td>
+            <td><span class="color_purple">有家庭</span></td>
+            <td>无</td>
+            <td>无家庭</td>
+          </tr>
+          <tr>
+            <td>男</td>
+            <td><span class="color_red">男</span></td>
+            <td>女</td>
+            <td><span class="color_green">女</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="fixed-btn" v-tippy="{
+           html: '#search-tips',
+           trigger: 'mouseenter focus',
+           arrow: true,
+           animation: 'perspective',
+           theme: 'dark',
+         }">
+    </button>
     <vue-good-table
       :columns="columns"
       :rows="rows"

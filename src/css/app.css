@@ -153,3 +153,19 @@ table.vgt-table {
   width: 100%;
   background-color: #86e01e;
 }
+
+.hidden {
+  display: none;
+}
+
+.fixed-btn {
+  position: fixed;
+  z-index: 100000;
+  left: 3px;
+  top: 6px;
+  width: 32px;
+  height: 32px;
+  border-style: none;
+  cursor: help;
+  background: transparent url("../../static/image/tip_32px.png");
+}
